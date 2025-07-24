@@ -1,2 +1,3 @@
 git add .
-git commit -m "Primer commit con configuración de Vercel Cron"
+git commit -m "remove invalid vercel.json"
+git push
