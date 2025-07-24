@@ -22,7 +22,18 @@ async function scrapeOneDay(date: dayjs.Dayjs) {
 
   const html = await res.text()
   const $ = cheerio.load(html)
-  const activos: any[] = []
+  interface Activo {
+  titulo: string
+  tipo: string
+  estado: string
+  ubicacion: string
+  enlace_oficial: string
+  descripcion: string
+  fecha_publicacion: string
+  contacto: string
+}
+
+const activos: Activo[] = []
 
   $('div.sumario a').each((_, el) => {
     const titulo = $(el).text().trim()
