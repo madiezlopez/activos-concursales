@@ -1,3 +1,6 @@
+{
+  "version": 2
+}
 git add .
-git commit -m "remove invalid vercel.json"
+git commit -m "fix vercel.json"
 git push
